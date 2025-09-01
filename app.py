@@ -49,10 +49,6 @@ def registro():
 def productos():
     return render_template('productos_citas.html')
 
-#Codigo que ejecuta el servidor Flask
-if __name__ == '__main__':
-    app.run(debug=True)
-
 # Login de la aplicacion
 def login():
     if request.method == 'POST':
@@ -81,3 +77,7 @@ def logout():
     session.pop('usuario', None)
     flash('Has cerrado sesión correctamente')
     return redirect(url_for('login'))
+
+#Codigo que ejecuta el servidor Flask
+if __name__ == '__main__':
+    app.run(debug=True)
