@@ -1,29 +1,29 @@
-# 🔹 Entorno virtual
+# Entorno virtual
 venv/
 env/
 .venv/
 
-# 🔹 Variables de entorno (credenciales)
+# Variables de entorno (credenciales)
 .env
 
-# 🔹 Archivos compilados de Python
+# Archivos compilados de Python
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
 
-# 🔹 Archivos de logs
+# Archivos de logs
 *.log
 
-# 🔹 Archivos de base de datos locales (si usaras SQLite)
+# Archivos de base de datos locales (si usaras SQLite)
 *.db
 *.sqlite3
 
-# 🔹 Configuración de editores/IDE
+# Configuración de editores/IDE
 .vscode/
 .idea/
 *.swp
 
-# 🔹 Archivos del sistema operativo
+# Archivos del sistema operativo
 .DS_Store
 Thumbs.db
