@@ -21,7 +21,32 @@ def inicio():
 
 @app.route('/login')
 def login():
+    if request.method == 'POST':
+        correo = request.form['email']
+        contrasena = request.form['password']
+
+        cur = mysql.connection.cursor()
+        cur.execute("SELECT * FROM usuarios WHERE correo = %s AND contrasena = %s", (correo, contrasena))
+        usuario = cur.fetchone()
+        cur.close()
+
+        if usuario:
+            # Guardamos la sesión del usuario
+            session['usuario'] = usuario[1]  # Ejemplo: nombre completo
+            flash('Bienvenido, ' + session['usuario'])
+            return redirect(url_for('productos'))
+        else:
+            flash('Correo o contraseña incorrectos')
+            return redirect(url_for('login'))
     return render_template('login.html')
+
+# Para cerrar sesion
+@app.route('/logout')
+def logout():
+    session.pop('usuario', None)
+    flash('Has cerrado sesión correctamente')
+    return redirect(url_for('login'))
+
 
 @app.route('/registro', methods=['GET', 'POST'])
 def registro():
@@ -48,35 +73,6 @@ def registro():
 @app.route('/productos_citas')
 def productos():
     return render_template('productos_citas.html')
-
-# Login de la aplicacion
-def login():
-    if request.method == 'POST':
-        correo = request.form['email']
-        contrasena = request.form['password']
-
-        cur = mysql.connection.cursor()
-        cur.execute("SELECT * FROM usuarios WHERE correo = %s AND contrasena = %s", (correo, contrasena))
-        usuario = cur.fetchone()
-        cur.close()
-
-        if usuario:
-            # Guardamos la sesión del usuario
-            session['usuario'] = usuario[1]  # Ejemplo: nombre completo
-            flash('Bienvenido, ' + session['usuario'])
-            return redirect(url_for('productos'))
-        else:
-            flash('Correo o contraseña incorrectos')
-            return redirect(url_for('login'))
-    
-    return render_template('login.html')
-
-# Para cerrar sesion
-@app.route('/logout')
-def logout():
-    session.pop('usuario', None)
-    flash('Has cerrado sesión correctamente')
-    return redirect(url_for('login'))
 
 #Codigo que ejecuta el servidor Flask
 if __name__ == '__main__':
