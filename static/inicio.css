@@ -1,0 +1,368 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.body_contenedor{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: #ffffff;
+}
+
+a{
+    text-decoration: none;
+    color: #c8913c;
+}
+
+header{
+    width: 100%;
+    height: 5rem;
+    background-color: #D9D9D9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10rem;
+}
+header a{
+    font-weight: 600;
+    color: #c8913c;
+}
+header img{
+    width: 8rem;
+}
+
+.categoria{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+.categoria svg{
+    width: 1.1rem;
+    height: 1.1rem;
+    font-weight: 800;
+}
+
+.banner{
+    width: 100%;
+    height: 35rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.block_descripcion_banner{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 3rem;
+}
+
+.descripcion_banner h1{
+    font-size: 4rem;
+    padding: 0;
+    margin: 0;
+    font-family:'Times New Roman', Times, serif ;
+    color: #c8913c;
+}
+.descripcion_banner h4{
+    font-weight: 100;
+    color: #333333;
+    padding: 0 3rem 1.5rem 0;
+}
+.descripcion_banner a{
+    background-color: #c8913c;
+    color: white;
+    padding: 0.3rem 1.5rem;
+    border-radius: 7px;
+}
+.block_img_banner{
+    width: 50%;
+    height: 100%;
+}
+.block_img_banner img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.block_presentacion_productos{
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+}
+.presentacion{
+    width: 100%;
+    height: auto;
+    margin-bottom: 5rem;
+}
+.presentacion_titulo{
+    width: 100%;
+    height: 2rem;
+    text-align: center;
+    margin: 1.5rem 0;
+}
+.presentacion_titulo h3{
+    font-size: 2rem;
+    font-family: 'Times New Roman', Times, serif;
+    color: #c8913c;
+    align-items: center;
+}
+.presentacion_productos{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5rem;
+}
+.presentacion_productos a{
+    width: 10rem;
+    height: 10rem;
+    display: flex;
+    flex-direction: column;
+}
+.presentacion_productos a img{
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.presentacion_productos .titulo_producto{
+    text-align: center;
+    font-size: 1.1rem;
+    color: #333333;
+    margin: 0.5rem 0 0 0;
+}
+.presentacion_productos a p{
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: 100;
+    color: #333333;
+    margin: 0.5rem 0 0 0;
+}
+
+.presentacion_productos2{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
+}
+.presentacion_productos2 a{
+    width: 10rem;
+    height: 10rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10rem;
+}
+.presentacion_productos2 a img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 0.5rem;
+}
+
+.block_cards{
+    width: 100%;
+    height: auto;
+}
+.presentacion_card{
+    width: 100%;
+    height: 100%;
+    margin: 1rem 0;
+    padding: 5rem 10rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 1rem;
+    justify-items: center;
+}
+.contenedor_card{
+    width: 20rem;
+    height: 20rem;
+    border-color: #c8913c;
+    border-style: solid;
+    flex-direction: column;
+    padding: 1rem;
+    text-align: center;
+    color: #c8913c;
+}
+.img_card img{
+    width: 8rem;
+    height: 8rem;
+    object-fit: cover;
+    margin: 0 auto;
+}
+.boton_card button{
+    margin-top: 1rem;
+    width: auto;
+    height: 1.5rem;
+    background-color: #c8913c;
+    color: white;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+.block_cita{
+    width: 100%;
+    height: 35rem;
+    display: flex;
+    justify-content: space-between;
+}
+.block_descripcion_cita{
+    width: 40%;
+    height: 100%;
+    padding: 7rem 3rem;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.titulo_cita{
+    width: 100%;
+    height: 70%;
+}
+.titulo_cita h2{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 2.5rem;
+    font-family: 'Times New Roman', Times, serif;
+    color: #c8913c;
+}
+.descripcion_cita{
+    width: 100%;
+    height: 15%;
+}
+.descripcion_cita h5{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    color: #333333;
+    font-size: 1rem;
+}
+.descripcion_cita p{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    color: #333333;
+    font-size: 0.9rem;
+}
+.boton_cita{
+    width: 100%;
+    height: 15%;
+}
+.boton_cita button{
+    width: auto;
+    height: auto;
+    background-color: transparent;
+    border: none;
+    color: #c8913c;
+    font-weight: 800;
+    padding: 0;
+    margin: 0;
+}
+
+.block_img_cita{
+    width: 60%;
+    height: 100%;
+}
+.block_img_cita img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+footer{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: #D9D9D9;
+}
+.block_info{
+    width: 100%;
+    height: 100%;
+    padding: 2rem 10rem;
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid black;
+}
+.contenido_info{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 30rem;
+}
+.info{
+    width: 50%;
+}
+.info, h3, a, h4, p{
+    padding: 0;
+    margin: 0;
+    font-weight: 400;
+    color: #333333;
+}
+.contacto{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.redes_contacto svg{
+    width: 2rem;
+    height: 2rem;
+}
+.copy p{
+    text-align: center;
+}
+
+
+
+
+
+
+
+@media (min-width: 1400px) {
+
+    .categoria a{
+        font-size: 1rem;
+    }
+
+    .banner{
+        margin-bottom: 5rem;
+    }
+    .block_descripcion_banner{
+        width: 50%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 10rem;
+    }
+    .block_cards{
+        padding: 2rem 12rem;
+    }
+    .block_descripcion_cita{
+        width: 45%;
+        height: 100%;
+        padding: 7rem 7rem;
+        
+    }
+    .block_img_cita{
+        width: 55%;
+        height: 100%;
+    }
+
+
+}
