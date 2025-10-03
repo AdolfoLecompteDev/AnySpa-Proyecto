@@ -3,16 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Producto - Spa Estético</title>
+
+    <!-- Iconos y estilos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../static/productos_citas.css">
-    <title>Producto - Spa Estético</title>
-    </head>
-</head>
 </head>
 <body>
     <!-- Encabezado -->
     <header class="encabezado">
-        <div class="logotipo"><img src="../static/img/AnySpa.png" alt="Logo"></div>
+        <div class="logotipo">
+            <img src="../static/img/AnySpa.png" alt="Logotipo Spa Estético">
+        </div>
         <nav class="navegacion">
             <a href="./inicio.html">Inicio</a>
             <a href="#!">Productos</a>
@@ -20,57 +22,70 @@
             <a href="#">Nosotros</a>
         </nav>
         <div class="iconos-encabezado">
-            <button class="boton-icono"><i class="fa-solid fa-magnifying-glass" style="color: #FFD43B;"></i></button>
-            <button class="boton-icono"><i class="fa-solid fa-cart-shopping" style="color: #f4d03f;"></i></button>
-            <button class="boton-icono"><i class="fa-solid fa-user" style="color: #FFD43B;"></i></button>
+            <button class="boton-icono" aria-label="Buscar">
+                <i class="fa-solid fa-magnifying-glass" style="color: #FFD43B;"></i>
+            </button>
+            <button class="boton-icono" aria-label="Carrito">
+                <i class="fa-solid fa-cart-shopping" style="color: #f4d03f;"></i>
+            </button>
+            <button class="boton-icono" aria-label="Usuario">
+                <i class="fa-solid fa-user" style="color: #FFD43B;"></i>
+            </button>
         </div>
     </header>
 
     <!-- Contenido Principal -->
-    <div class="contenedor">
+    <main class="contenedor">
         <!-- Columna Izquierda -->
-        <div class="columna-izquierda">
+        <section class="columna-izquierda">
             <!-- Galería del Producto -->
             <div class="galeria-producto">
-                <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=500&h=400&fit=crop" alt="Tratamiento facial" class="imagen-principal" id="imagenPrincipal">
+                <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=500&h=400&fit=crop" 
+                     alt="Tratamiento facial rejuvenecedor" 
+                     class="imagen-principal" 
+                     id="imagenPrincipal">
                 
-                <button class="flechas-navegacion anterior" onclick="cambiarImagen(-1)">‹</button>
-                <button class="flechas-navegacion siguiente" onclick="cambiarImagen(1)">›</button>
-                <button class="boton-zoom"><i class="fa-solid fa-magnifying-glass" style="color: #FFD43B;"></i></button>
+                <button class="flechas-navegacion anterior" onclick="cambiarImagen(-1)" aria-label="Imagen anterior">‹</button>
+                <button class="flechas-navegacion siguiente" onclick="cambiarImagen(1)" aria-label="Imagen siguiente">›</button>
+                <button class="boton-zoom" aria-label="Ampliar imagen">
+                    <i class="fa-solid fa-magnifying-glass" style="color: #FFD43B;"></i>
+                </button>
 
                 <div class="miniaturas">
-                    <div class="miniatura activa" onclick="establecerImagenPrincipal(0)"></div>
-                    <div class="miniatura" onclick="establecerImagenPrincipal(1)"></div>
-                    <div class="miniatura" onclick="establecerImagenPrincipal(2)"></div>
+                    <div class="miniatura activa" onclick="establecerImagenPrincipal(0)" role="button" aria-label="Vista previa 1"></div>
+                    <div class="miniatura" onclick="establecerImagenPrincipal(1)" role="button" aria-label="Vista previa 2"></div>
+                    <div class="miniatura" onclick="establecerImagenPrincipal(2)" role="button" aria-label="Vista previa 3"></div>
                 </div>
             </div>
             
-            <!-- Información del Tratamiento debajo de la galería -->
-            <div class="informacion-tratamiento">
-                <div class="titulo-seccion"><i class="fa-solid fa-star" style="color: #FFD43B;"></i> Tratamiento Incluye</div>
-                <div class="contenido-seccion">
-                    Tanto químico que ni me sé el nombre.
-                </div>
-            </div>
-        </div>
+            <!-- Información del Tratamiento -->
+            <section class="informacion-tratamiento">
+                <h2 class="titulo-seccion">
+                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i> Tratamiento Incluye
+                </h2>
+                <p class="contenido-seccion">
+                    Exfoliación, mascarilla hidratante y limpieza profunda.
+                </p>
+            </section>
+        </section>
 
         <!-- Detalles del Producto -->
-        <div class="detalles-producto">
-            <h1 class="titulo-producto">Tratamiento pa la hp cara esa</h1>
+        <section class="detalles-producto">
+            <h1 class="titulo-producto">Tratamiento Facial Premium</h1>
             
             <div class="seccion-precio">
-                <span class="precio-anterior">COP. 100.000</span>
-                <span class="precio-actual">COP. 80.000</span>
+                <span class="precio-anterior">COP 100.000</span>
+                <span class="precio-actual">COP 80.000</span>
             </div>
 
             <p class="descripcion-producto">
-                Tratamiento facial para arreglarle la jeta
+                Tratamiento facial especializado para revitalizar y rejuvenecer la piel, ideal para un rostro saludable y radiante.
             </p>
 
             <div class="informacion-producto">
                 <div class="fila-informacion">
                     <span class="etiqueta-informacion">Vendedor:</span>
-                    <span class="valor-informacion">Su madre</span>
+                    <span class="valor-informacion">Spa Estético</span>
                 </div>
                 <div class="fila-informacion">
                     <span class="etiqueta-informacion">SKU:</span>
@@ -81,8 +96,8 @@
                     <span class="valor-informacion disponibilidad">Disponible</span>
                 </div>
                 <div class="fila-informacion">
-                    <span class="etiqueta-informacion">Tamaño:</span>
-                    <span class="valor-informacion">20MG</span>
+                    <span class="etiqueta-informacion">Presentación:</span>
+                    <span class="valor-informacion">20 ml</span>
                 </div>
             </div>
 
@@ -91,45 +106,53 @@
                 <span class="etiqueta">Tratamiento</span>
                 <span class="etiqueta">Piel Sana</span>
                 <span class="etiqueta">Rostro</span>
-                <span class="etiqueta">SkinWhite</span>
+                <span class="etiqueta">Bienestar</span>
                 <span class="etiqueta">Mujer</span>
-                <span class="etiqueta">Femenino</span>
             </div>
 
             <div class="seccion-cantidad">
-                <span class="etiqueta-cantidad">Cantidad:</span>
+                <label for="cantidad" class="etiqueta-cantidad">Cantidad:</label>
                 <div class="controles-cantidad">
-                    <button class="boton-cantidad" onclick="cambiarCantidad(-1)">-</button>
+                    <button class="boton-cantidad" onclick="cambiarCantidad(-1)" aria-label="Disminuir cantidad">-</button>
                     <input type="number" class="entrada-cantidad" value="1" min="1" id="cantidad">
-                    <button class="boton-cantidad" onclick="cambiarCantidad(1)">+</button>
+                    <button class="boton-cantidad" onclick="cambiarCantidad(1)" aria-label="Aumentar cantidad">+</button>
                 </div>
             </div>
 
             <div class="botones-accion">
-                <button class="boton-principal" onclick="agregarAlCarrito()">Añadir Al Carrito</button>
-                <button class="boton-favoritos"><i class="fa-regular fa-heart" style="color: #FFD43B;"></i></button>
+                <button class="boton-principal" onclick="agregarAlCarrito()">Añadir al Carrito</button>
+                <button class="boton-favoritos" aria-label="Añadir a favoritos">
+                    <i class="fa-regular fa-heart" style="color: #FFD43B;"></i>
+                </button>
             </div>
 
             <div class="acciones-adicionales">
-                <button class="boton-compartir"><i class="fa-solid fa-share" style="color: #FFD43B;"></i> Compartir</button>
-                <span class="disponibilidad">Disponible Para Reserva</span>
+                <button class="boton-compartir" aria-label="Compartir producto">
+                    <i class="fa-solid fa-share" style="color: #FFD43B;"></i> Compartir
+                </button>
+                <span class="disponibilidad">Disponible para reserva</span>
             </div>
 
-            <div class="informacion-envios">
-                <div class="titulo-seccion"><i class="fa-solid fa-truck" style="color: #FFD43B;"></i> Envíos Y Devoluciones</div>
-                <div class="contenido-seccion">
-                    Envío gratis si me presenta a su mamá 🫡.
-                </div>
-            </div>
+            <section class="informacion-envios">
+                <h2 class="titulo-seccion">
+                    <i class="fa-solid fa-truck" style="color: #FFD43B;"></i> Envíos y Devoluciones
+                </h2>
+                <p class="contenido-seccion">
+                    Envíos nacionales disponibles. Devoluciones en un plazo de 7 días hábiles.
+                </p>
+            </section>
 
-            <div class="politica-devolucion">
-                <div class="titulo-seccion"><i class="fa-solid fa-arrows-spin" style="color: #FFD43B;"></i> Nuestra Política De Devoluciones</div>
-                <div class="contenido-seccion">
-                    NO HAY, CONOCE LA DE YAPER?
-                </div>
-            </div>
-        </div>
-    </div>
+            <section class="politica-devolucion">
+                <h2 class="titulo-seccion">
+                    <i class="fa-solid fa-arrows-spin" style="color: #FFD43B;"></i> Política de Devoluciones
+                </h2>
+                <p class="contenido-seccion">
+                    Aceptamos cambios y devoluciones siempre que el producto no haya sido abierto ni manipulado.
+                </p>
+            </section>
+        </section>
+    </main>
+
     <script src="../static/main.js"></script>
 </body>
 </html>

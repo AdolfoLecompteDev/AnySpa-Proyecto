@@ -11,7 +11,7 @@
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
-  <!-- Google Font (opcional, ya la usabas) -->
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600&display=swap" rel="stylesheet"/>
@@ -21,8 +21,7 @@
   <header class="navbar" role="banner">
     <div class="navbar-inner">
       <div class="logo">
-        <!-- Pon aquí tu imagen (archivo 'logo.jpg' en la misma carpeta) -->
-        <img src="../static/img/AnySpa.png" alt="AnySpa Logo" />
+        <img src="../static/img/AnySpa.png" alt="Logo de AnySpa" />
       </div>
 
       <!-- botón hamburguesa (visible en móvil) -->
@@ -39,10 +38,16 @@
         </ul>
       </nav>
 
-      <div class="icons" aria-hidden="false">
-        <i class="fas fa-search" title="Buscar"></i>
-        <i class="fa-solid fa-cart-shopping" title="Carrito"></i>
-        <i class="fas fa-user" title="Usuario"></i>
+      <div class="icons">
+        <button class="icon-btn" aria-label="Buscar">
+          <i class="fas fa-search" aria-hidden="true"></i>
+        </button>
+        <button class="icon-btn" aria-label="Carrito">
+          <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+        </button>
+        <a href="./login.html" class="icon-btn" aria-label="Usuario">
+          <i class="fas fa-user" aria-hidden="true"></i>
+        </a>
       </div>
     </div>
   </header>
@@ -50,14 +55,18 @@
   <!-- MAIN -->
   <main class="login-container" role="main">
     <section class="login-shell" aria-labelledby="login-title">
-      <h2 id="login-title">Inicia sesión</h2>
+      <h1 id="login-title">Inicia sesión</h1>
 
-      <form id="loginForm" class="login-box" novalidate>
-        <label for="email">Correo electrónico</label>
-        <input type="email" id="email" name="email" placeholder="tu@correo.com" required />
+      <form id="loginForm" class="login-box" method="post" action="/login">
+        <div class="form-group">
+          <label for="email">Correo electrónico</label>
+          <input type="email" id="email" name="email" placeholder="tu@correo.com" required />
+        </div>
 
-        <label for="password">Contraseña</label>
-        <input type="password" id="password" name="password" placeholder="••••••••" required />
+        <div class="form-group">
+          <label for="password">Contraseña</label>
+          <input type="password" id="password" name="password" placeholder="••••••••" required />
+        </div>
 
         <button type="submit" class="btn-login">Ingresar</button>
 
@@ -66,12 +75,14 @@
         </div>
       </form>
 
-      <div class="register-link">
-        <a href="./formulario.html">¿No tienes cuenta? Regístrate aquí</a>
-      </div>
+      <p class="register-link">
+        ¿No tienes cuenta?
+        <a href="./formulario.html">Regístrate aquí</a>
+      </p>
     </section>
   </main>
 
-  <script src="../static/login.js"></script>
+  <!-- Scripts -->
+  <script src="../static/login.js" defer></script>
 </body>
 </html>
