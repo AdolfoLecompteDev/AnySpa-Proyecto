@@ -31,7 +31,7 @@
 
       <nav class="nav" role="navigation" aria-label="Menú principal">
         <ul>
-          <li><a href="./inicio.html">Inicio</a></li>
+          <li><a href="{{ url_for('inicio') }}">Inicio</a></li>
           <li><a href="#">Productos</a></li>
           <li><a href="#">Tratamientos</a></li>
           <li><a href="#">Nosotros</a></li>
@@ -77,7 +77,7 @@
 
       <p class="register-link">
         ¿No tienes cuenta?
-        <a href="./formulario.html">Regístrate aquí</a>
+        <a href="{{ url_for('registro') }}">Regístrate aquí</a>
       </p>
     </section>
   </main>
